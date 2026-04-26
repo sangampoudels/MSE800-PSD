@@ -1,0 +1,4 @@
+This Diagram shows the relationship between students enrollement in different courses . This daigram was created in draw.io.
+The relationship between students is one to many with course.
+The student entity contains attributes such as  Student_id(primary key),Student_email and Student_name which has a one to many relationship to enrolled in which contain attributes such as Enrollement_id(primary Key) and Student_id(foreign key), Course_Id.(foreign key). as well as Enrollesd has many to many relationship with courses which contain attributes like Course-Id(primary key), course title and credit Hours. 
+I added an attribute lecturer entity with attribute Lecturer_id , FirstName, LastName, Email and Department .
