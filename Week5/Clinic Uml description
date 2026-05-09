@@ -1,0 +1,138 @@
+The Clinic System Activity Diagram is shown below.The following is the detailed explanation of the Clinic System Activity Diagram.
+Introduction
+This UML Activity Diagram depicts the activity sequence of Clinic Management System. The system enables a patient to:
+register/login,book an appointment,Pay consultation fee,attend consultation,order medication,and full payment of medications.
+The diagram represents the interaction of various elements of the system from start to finish.Swimlanes in the Diagram
+The diagram has three swimlanes.
+1. Patient Swimlane
+All Activities of the Patient are located in this section.
+Examples:
+Login/Register
+Book Appointment
+Make Payment
+Order Medication
+2. Clinic System Swimlane
+These are system processes included in this section.
+Examples:
+Check Doctor Availability
+Generate Invoice
+Confirm Appointment
+Confirm Medication Order
+3. Payment Gateway Swimlane
+This is the process that deals with online payment transactions.
+Examples:
+Process Booking Fee Payment.
+Process Medication Payment
+Brief notes and explanations for each step.
+
+1. Start
+It starts at the black filled circle (first node).
+This represents the beginning of the clinic's workflow.
+
+2. Login / Register
+The first step in the process of the patient entering the system is:
+Signing up for a new account,When an existing account is being used, login in.This step provides for safe access to clinic services.
+
+3. Book Appointment
+Once the patient logs on, he/she requests an appointment with the clinic.
+This is an information to the clinic system for processing.
+
+4. Receive Appointment Request
+The clinic system accepts the appointment booking request from the patient.
+System is preparing to check doctor availability.
+
+5. Check Doctor Availability
+The clinic system checks:available doctors,available dates,and time slots.
+This way, the doctor that you choose is available during the time that you want.
+
+6. Decision: Slot Available?
+A diamond with two arrows leading outwards is a decision node.
+There are two alternatives:
+If NO
+The selected slot is out of stock,The patient will have to choose another doctor, date, and time.The flow then recirculates back to:Select Doctor, Date & Time”
+If YES
+The appointment process is ongoing.The system then starts to create the invoice.
+
+7. Click on Doctor & Date & Time.
+The patient chooses:doctor name,appointment date,appointment time.
+This information is necessary in order to confirm your booking.
+
+8. Generate a Contracts Report.10. Generate an Invoice (Booking Fee).
+The clinic system gives out:booking fee,consultation charge.
+
+Then the system prints out the payment invoice.
+
+9.Process Payment (Booking Fee)
+The payment details are then passed on to the Payment Gateway.
+The gateway securely processes the online payment.
+
+10. Decision: Payment Successful?
+Next, there is another decision node for payment status.
+If NO
+payment failed,patient retries payment.
+If YES
+payment is accepted,appointment is confirmed.
+
+11. Confirm Appointment
+The appointment is confirmed by the clinic system.
+Confirmation information is given to the patient.
+
+12. Conduct Consultation
+Patient visits the clinic and consults with the physician.
+The doctor examines the patient.
+
+13. Decision: Medication Required?
+The doctor after consultation concludes whether or not a medication is required.
+If NO
+no medicine required,process ends.
+If YES
+Patient continues to medication order process.
+
+14. Order Medication
+The patient calls the hospital to get the medicines that they are ordered to take.
+Order is recorded in the clinic system.
+
+15. Confirm Medication Order
+The clinic system verifies:
+medicine availability,order details.The order is then confirmed.
+
+16. Process Payment (Medication)
+Medication fee is paid by the patient.
+The payment gateway executes the payment.
+
+17. Decision: Payment Successful?
+If NO
+
+
+patient retries payment.
+If YES
+medication payment succeeds.Clinic is conducted with delivery/pickup.
+
+18. Provide Order to Patient
+The clinic system offers medicine to the patient via:
+clinic pickup,or delivery service.
+
+19. Receive Medication
+Patient is able to take the medication.
+
+20. End
+The process stops at the last node (black circle with outer boundary).
+This shows that they have passed:appointment booking,consultation,and medication process.
+
+Overall System Workflow:
+The clinic activity diagram illustrates the overall patient's journey:
+Patient logs in to system.
+Patient books appointment.
+Checks doctor availability for the system.
+Booking fee is paid and generated.
+Appointment gets confirmed.
+Patient attends consultation.
+Medication is determined by Doctor.
+Patient self orders medication if necessary.
+Medication payment is made.
+Patient receives medicine.
+Process ends successfully.
+
+Conclusion
+This activity diagram helps visualize how the clinic system operates step-by-step. It clearly shows:
+patient interactions,internal clinic processing,and payment handling.The swimlane design helps to clarify the issues by dividing duties between:Patient,Clinic System,and Payment Gateway.This will simplify the system analysis, development and management.
