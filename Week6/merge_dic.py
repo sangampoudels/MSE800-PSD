@@ -25,10 +25,31 @@ student3 = {
     "status": "Researcher"
 }
 
+#Check condition for name starting with "ex"
+# merged_students = {**{k: v for k, v in student1.items() if k == 'name' and 'ex' in str(v)},
+#                    **{k: v for k, v in student2.items() if k == 'name' and 'ex' in str(v)},
+#                    **{k: v for k, v in student3.items() if k == 'name' and 'ex' in str(v)}}
+# print(merged_students)
 
-
-# Check condition for name starting with "azw"
-merged_students = {**{k: v for k, v in student1.items() if k == 'name' and 'hia' in str(v)},
-                   **{k: v for k, v in student2.items() if k == 'name' and 'hia' in str(v)},
-                   **{k: v for k, v in student3.items() if k == 'name' and 'hia' in str(v)}}
+#Check condition for students details starting with "ex"
+merged_students = {
+    **{k: v for k, v in student1.items() if "ex" in student1["name"].lower()},
+    **{k: v for k, v in student2.items() if "ex" in student2["name"].lower()},
+    **{k: v for k, v in student3.items() if "ex" in student3["name"].lower()}
+}
 print(merged_students)
+
+
+# #Check condition for name starting with "hia"
+# merged_students = {**{k: v for k, v in student1.items() if k == 'name' and 'hia' in str(v)},
+#                    **{k: v for k, v in student2.items() if k == 'name' and 'hia' in str(v)},
+#                    **{k: v for k, v in student3.items() if k == 'name' and 'hia' in str(v)}}
+# print(merged_students)
+
+
+
+# # Check condition for name starting with "azw"
+# merged_students = {**{k: v for k, v in student1.items() if k == 'name' and 'azw' in str(v)},
+#                    **{k: v for k, v in student2.items() if k == 'name' and 'azw' in str(v)},
+#                    **{k: v for k, v in student3.items() if k == 'name' and 'azw' in str(v)}}
+#print(merged_students)
